@@ -1,79 +1,52 @@
 const products = [
   {
     name: "IG Sentinel",
-    tag: "Threat Detection",
+    tag: "Detection",
     description:
-      "The AI detection engine at the core of our platform. Correlates endpoint, network, and cloud telemetry to surface real threats in real time.",
+      "The core AI detection engine. Correlates endpoint, network, and cloud telemetry to surface real threats and cut through alert noise.",
   },
   {
     name: "IG Shield",
-    tag: "Cloud Security",
+    tag: "Cloud security",
     description:
-      "Cloud security posture management with automated compliance mapping for SOC 2, ISO 27001, HIPAA, and PCI-DSS.",
+      "Continuous cloud security posture management with compliance mapping toward SOC 2, ISO 27001, HIPAA, and PCI-DSS.",
   },
   {
     name: "IG Recon",
-    tag: "Offensive Security",
+    tag: "Offensive security",
     description:
-      "Continuous attack-surface mapping and red-team-as-a-service, run by former nation-state and Fortune 500 operators.",
+      "Attack-surface mapping and penetration testing engagements, run by our security team on a recurring schedule.",
   },
 ];
 
 export default function Platform() {
   return (
-    <section id="platform" className="py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:items-center">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-widest text-cyan-300">
-              The IG platform
+    <section id="platform" className="py-24 lg:py-28">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
+          <div className="max-w-md">
+            <p className="mono-label text-xs uppercase text-accent">
+              The platform
             </p>
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-              Built by operators. Powered by AI that never sleeps.
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+              One system, three parts
             </h2>
             <p className="mt-4 text-muted">
-              Founded in 2018 by a team of former NSA and Google security
-              engineers, IG Technologies set out to close the gap between the
-              speed of AI-assisted attacks and the pace of legacy security
-              tooling. Today our models process over 2.4 billion signals a
-              day to protect finance, healthcare, and SaaS companies around
-              the world.
+              IG Sentinel, IG Shield, and IG Recon share the same data model,
+              so a finding from a pentest, a cloud misconfiguration, and a
+              live detection all show up in one place — not three
+              disconnected tools.
             </p>
-
-            <dl className="mt-10 grid grid-cols-2 gap-8">
-              <div>
-                <dt className="text-sm text-muted">Founded</dt>
-                <dd className="mt-1 text-lg font-medium text-white">2018</dd>
-              </div>
-              <div>
-                <dt className="text-sm text-muted">Headquarters</dt>
-                <dd className="mt-1 text-lg font-medium text-white">
-                  San Francisco, CA
-                </dd>
-              </div>
-              <div>
-                <dt className="text-sm text-muted">Team</dt>
-                <dd className="mt-1 text-lg font-medium text-white">
-                  260+ engineers &amp; analysts
-                </dd>
-              </div>
-              <div>
-                <dt className="text-sm text-muted">Certifications</dt>
-                <dd className="mt-1 text-lg font-medium text-white">
-                  SOC 2 · ISO 27001
-                </dd>
-              </div>
-            </dl>
           </div>
 
           <div className="space-y-4">
             {products.map((product) => (
-              <div key={product.name} className="card rounded-2xl p-6">
+              <div key={product.name} className="card rounded-xl p-6">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-lg font-semibold text-white">
+                  <h3 className="text-base font-semibold text-white">
                     {product.name}
                   </h3>
-                  <span className="rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3 py-1 text-xs font-medium text-cyan-300">
+                  <span className="mono-label rounded border border-white/10 px-2 py-1 text-[11px] text-muted">
                     {product.tag}
                   </span>
                 </div>

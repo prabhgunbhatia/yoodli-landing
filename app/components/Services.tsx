@@ -10,69 +10,65 @@ import {
 const services = [
   {
     icon: RadarIcon,
-    title: "AI Threat Detection & Response",
+    title: "AI Threat Detection",
     description:
-      "Behavioral ML models trained on billions of daily signals spot novel attacks before signatures exist, and auto-contain them in seconds.",
+      "A lightweight agent watches endpoint, network, and cloud activity and uses ML models to flag behavior that looks wrong — not just traffic that matches a known signature.",
   },
   {
     icon: ShieldIcon,
-    title: "Managed Detection & Response",
+    title: "AI-Assisted Response",
     description:
-      "A 24/7 SOC of human analysts paired with AI copilots triages alerts, hunts threats, and owns response — so your team can sleep.",
+      "When something looks like a real incident, IG triages it, drafts a plain-English summary of what happened, and can auto-contain it — revoke a session, isolate a host, block an IP.",
   },
   {
     icon: TargetIcon,
-    title: "Penetration Testing & Red Teaming",
+    title: "Penetration Testing",
     description:
-      "Offensive security engagements that emulate real adversaries across network, application, cloud, and social engineering vectors.",
+      "Manual and automated assessments of your network, web apps, and cloud config, run by our team, with a clear report of what's exploitable and how to fix it — not just a scanner dump.",
   },
   {
     icon: CloudIcon,
-    title: "Cloud Security Posture Management",
+    title: "Cloud Security Posture",
     description:
-      "Continuous, automated misconfiguration and compliance scanning across AWS, Azure, and GCP with one-click remediation.",
+      "Continuous scanning of your AWS, Azure, or GCP config for misconfigurations, public buckets, and over-permissioned roles, mapped to SOC 2 and ISO 27001 controls.",
   },
   {
     icon: FingerprintIcon,
-    title: "Identity & Access Intelligence",
+    title: "Identity Threat Detection",
     description:
-      "AI-driven behavioral analytics detect compromised credentials, insider risk, and privilege abuse across your identity fabric.",
+      "Behavioral baselines for every user and service account, so credential theft, impossible-travel logins, and privilege abuse get caught even when the password was correct.",
   },
   {
     icon: AlertIcon,
-    title: "Security Awareness & Phishing Simulation",
+    title: "Phishing Simulation & Training",
     description:
-      "Adaptive, AI-generated phishing simulations and micro-training that measurably reduce human risk over time.",
+      "AI-generated phishing simulations tailored to your company, with short, targeted training for anyone who clicks — measured over time, not a once-a-year slideshow.",
   },
 ];
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-widest text-cyan-300">
+    <section id="product" className="py-24 lg:py-28">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        <div className="max-w-xl">
+          <p className="mono-label text-xs uppercase text-accent">
             What we do
           </p>
-          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-            One platform. Every layer of defense.
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+            Everything a lean security team needs, none of the noise
           </h2>
           <p className="mt-4 text-muted">
-            From prevention to detection to response, IG Technologies covers the
-            full security lifecycle so nothing falls through the cracks.
+            Most companies past a certain size can&apos;t justify a full
+            in-house SOC. IG Technologies gives you the coverage of one,
+            built around AI instead of headcount.
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
-            <div
-              key={service.title}
-              className="card group rounded-2xl p-6 transition-colors hover:border-cyan-400/30"
-            >
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-400/15 to-violet-400/15 text-cyan-300">
-                <service.icon className="h-5 w-5" />
-              </div>
-              <h3 className="mt-5 text-lg font-medium text-white">
+            <div key={service.title} className="bg-[#09090b] p-7">
+              <service.icon className="h-5 w-5 text-accent" />
+              <h3 className="mt-5 text-base font-medium text-white">
                 {service.title}
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-muted">

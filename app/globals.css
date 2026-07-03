@@ -4,19 +4,15 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
-  --color-ink: #050810;
-  --color-surface: #0a0e1a;
-  --color-surface-2: #10162a;
-  --color-border: #1c2440;
-  --color-cyan: #22d3ee;
-  --color-emerald: #34d399;
-  --color-violet: #818cf8;
+  --color-ink: #09090b;
+  --color-border: #1f1f23;
+  --color-accent: #3ecfb2;
 }
 
 :root {
   --background: var(--color-ink);
-  --foreground: #e6e9f2;
-  --muted: #8b93ab;
+  --foreground: #f4f4f5;
+  --muted: #8b8b93;
 }
 
 body {
@@ -29,34 +25,20 @@ body {
   color: var(--muted);
 }
 
-.bg-grid {
-  background-image:
-    linear-gradient(to right, rgba(148, 163, 184, 0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
-  background-size: 44px 44px;
+.text-accent {
+  color: var(--color-accent);
 }
 
 .glow {
-  background: radial-gradient(closest-side, rgba(34, 211, 238, 0.22), transparent);
+  background: radial-gradient(closest-side, rgba(62, 207, 178, 0.14), transparent);
 }
 
 .card {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+  background: rgba(255, 255, 255, 0.015);
   border: 1px solid var(--color-border);
 }
 
-.gradient-text {
-  background: linear-gradient(90deg, #22d3ee, #818cf8);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-@keyframes pulse-slow {
-  0%, 100% { opacity: 0.6; }
-  50% { opacity: 1; }
-}
-
-.animate-pulse-slow {
-  animation: pulse-slow 3s ease-in-out infinite;
+.mono-label {
+  font-family: var(--font-mono), monospace;
+  letter-spacing: 0.08em;
 }

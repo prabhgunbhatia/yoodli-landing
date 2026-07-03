@@ -1,47 +1,44 @@
 const industries = [
   {
-    name: "Financial Services",
-    detail: "Fraud-aware threat models tuned for real-time payments and core banking systems.",
+    name: "Fintech & Financial Services",
+    detail: "Monitoring tuned for payment flows and core banking integrations, with an eye for fraud-adjacent behavior.",
   },
   {
-    name: "Healthcare",
-    detail: "HIPAA-ready monitoring across EHR systems, medical devices, and patient data pipelines.",
+    name: "Health Tech",
+    detail: "Coverage for EHR integrations and patient data pipelines, built with HIPAA requirements in mind from day one.",
   },
   {
     name: "SaaS & Technology",
-    detail: "API-first security that scales with cloud-native, multi-tenant architectures.",
+    detail: "API-first security that fits multi-tenant, cloud-native architectures without slowing down deploys.",
   },
   {
-    name: "Retail & E-commerce",
-    detail: "Bot mitigation, payment fraud detection, and seasonal-scale threat coverage.",
-  },
-  {
-    name: "Government & Public Sector",
-    detail: "FedRAMP-aligned controls and nation-state-grade threat intelligence.",
-  },
-  {
-    name: "Logistics & Manufacturing",
-    detail: "OT/IT convergence security protecting industrial control systems from disruption.",
+    name: "E-commerce",
+    detail: "Bot and account-takeover detection sized for growing stores, not enterprise retail budgets.",
   },
 ];
 
 export default function Industries() {
   return (
-    <section id="industries" className="py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-widest text-cyan-300">
+    <section id="industries" className="py-24 lg:py-28">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        <div className="max-w-xl">
+          <p className="mono-label text-xs uppercase text-accent">
             Industries
           </p>
-          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-            Security built for how your industry actually works
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+            Early customers, real constraints
           </h2>
+          <p className="mt-4 text-muted">
+            We&apos;re building alongside our first design partners across a
+            few industries where lean teams carry outsized security
+            responsibility.
+          </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-white/10 bg-white/10 sm:grid-cols-2">
           {industries.map((industry) => (
-            <div key={industry.name} className="bg-[#0a0e1a] p-8 transition-colors hover:bg-white/[0.03]">
-              <h3 className="text-base font-semibold text-white">
+            <div key={industry.name} className="bg-[#09090b] p-8">
+              <h3 className="text-base font-medium text-white">
                 {industry.name}
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-muted">

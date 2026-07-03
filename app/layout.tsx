@@ -13,21 +13,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "IG Technologies | AI-Powered Cybersecurity",
+  title: "IG Technologies | AI-Native Security for Lean Teams",
   description:
-    "IG Technologies builds AI-driven threat detection, managed security operations, and offensive security services that keep modern enterprises safe from evolving cyber threats.",
+    "IG Technologies is a Hamilton, Ontario-based startup building AI-native threat detection, cloud security, and penetration testing for teams too small for a full-time SOC.",
   keywords: [
     "IG Technologies",
     "AI cybersecurity",
-    "managed detection and response",
     "threat detection",
     "penetration testing",
-    "cloud security",
+    "cloud security posture management",
+    "Hamilton Ontario startup",
   ],
   openGraph: {
-    title: "IG Technologies | AI-Powered Cybersecurity",
+    title: "IG Technologies | AI-Native Security for Lean Teams",
     description:
-      "AI-driven threat detection, managed security operations, and offensive security services for modern enterprises.",
+      "AI-native threat detection, cloud security, and penetration testing for teams too small for a full-time SOC.",
     type: "website",
   },
 };

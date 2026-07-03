@@ -3,13 +3,12 @@ import Logo from "./Logo";
 const columns = [
   {
     title: "Platform",
-    links: ["IG Sentinel", "IG Shield", "IG Recon", "Integrations", "Pricing"],
+    links: ["IG Sentinel", "IG Shield", "IG Recon"],
   },
   {
     title: "Solutions",
     links: [
       "Threat Detection",
-      "Managed Detection & Response",
       "Penetration Testing",
       "Cloud Security",
       "Identity Security",
@@ -17,35 +16,31 @@ const columns = [
   },
   {
     title: "Company",
-    links: ["About", "Careers", "Newsroom", "Security", "Trust Center"],
-  },
-  {
-    title: "Resources",
-    links: ["Blog", "Threat Intel Reports", "Documentation", "Status", "Contact"],
+    links: ["About", "Careers", "Contact"],
   },
 ];
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/5 py-16">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:grid-cols-6">
+    <footer className="border-t border-white/10 py-16">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        <div className="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:grid-cols-5">
           <div className="col-span-2">
             <Logo />
             <p className="mt-4 max-w-xs text-sm text-muted">
-              AI-powered cybersecurity for the enterprises that can&apos;t
-              afford to get it wrong.
+              AI-native security for teams too small for a full-time SOC.
+              Founded by Prabhgun Bhatia.
             </p>
             <p className="mt-6 text-xs text-muted">
-              1 Market Street, Suite 3600
+              Hamilton, Ontario
               <br />
-              San Francisco, CA 94105
+              Canada
             </p>
           </div>
 
           {columns.map((col) => (
             <div key={col.title}>
-              <h4 className="text-sm font-semibold text-white">{col.title}</h4>
+              <h4 className="text-sm font-medium text-white">{col.title}</h4>
               <ul className="mt-4 space-y-3">
                 {col.links.map((link) => (
                   <li key={link}>
@@ -62,14 +57,13 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-8 sm:flex-row">
+        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
           <p className="text-xs text-muted">
             © {new Date().getFullYear()} IG Technologies, Inc. All rights reserved.
           </p>
           <div className="flex gap-6 text-xs text-muted">
             <a href="#" className="hover:text-white">Privacy Policy</a>
             <a href="#" className="hover:text-white">Terms of Service</a>
-            <a href="#" className="hover:text-white">Security</a>
           </div>
         </div>
       </div>

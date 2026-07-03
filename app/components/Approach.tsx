@@ -1,66 +1,61 @@
 const steps = [
   {
     step: "01",
-    title: "Ingest",
+    title: "Connect",
     description:
-      "We connect to your endpoints, cloud, identity, and network stack in under a day — no rip-and-replace required.",
+      "Install a lightweight agent and connect your cloud accounts and identity provider — no rip-and-replace of your existing stack.",
   },
   {
     step: "02",
-    title: "Analyze",
+    title: "Baseline",
     description:
-      "Our AI models baseline normal behavior and flag anomalies across billions of events, in milliseconds.",
+      "IG Sentinel spends its first days learning what normal looks like for your team, before it ever flags anything.",
   },
   {
     step: "03",
     title: "Detect",
     description:
-      "High-confidence threats are correlated into a single incident, enriched with context and adversary intent.",
+      "Anomalies get correlated into a single incident with context — not fifteen separate alerts for the same event.",
   },
   {
     step: "04",
     title: "Respond",
     description:
-      "Automated playbooks contain the threat instantly while our SOC analysts investigate and validate.",
+      "Low-risk incidents are auto-contained. Anything ambiguous is escalated to our team for a human decision before action is taken.",
   },
   {
     step: "05",
-    title: "Report",
+    title: "Improve",
     description:
-      "Executive-ready reporting and continuous recommendations keep your posture improving month over month.",
+      "A monthly review with our team turns each incident into a concrete change to your posture, not just a closed ticket.",
   },
 ];
 
 export default function Approach() {
   return (
-    <section id="approach" className="border-y border-white/5 bg-white/[0.02] py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-widest text-cyan-300">
+    <section id="approach" className="border-y border-white/10 bg-white/[0.02] py-24 lg:py-28">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        <div className="max-w-xl">
+          <p className="mono-label text-xs uppercase text-accent">
             How it works
           </p>
-          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-            From raw signal to resolved incident
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+            From raw signal to a decision you can trust
           </h2>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
-          {steps.map((item, i) => (
-            <div key={item.step} className="relative">
-              <div className="card h-full rounded-2xl p-6">
-                <span className="gradient-text text-3xl font-bold">
-                  {item.step}
-                </span>
-                <h3 className="mt-4 text-base font-semibold text-white">
-                  {item.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted">
-                  {item.description}
-                </p>
-              </div>
-              {i < steps.length - 1 && (
-                <div className="absolute top-1/2 -right-3 hidden h-px w-6 bg-gradient-to-r from-cyan-400/40 to-transparent lg:block" />
-              )}
+        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
+          {steps.map((item) => (
+            <div key={item.step} className="card rounded-xl p-6">
+              <span className="text-2xl font-semibold text-white/25">
+                {item.step}
+              </span>
+              <h3 className="mt-4 text-base font-medium text-white">
+                {item.title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted">
+                {item.description}
+              </p>
             </div>
           ))}
         </div>

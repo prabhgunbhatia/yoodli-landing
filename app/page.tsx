@@ -6,7 +6,7 @@ import Stats from "./components/Stats";
 import Platform from "./components/Platform";
 import Approach from "./components/Approach";
 import Industries from "./components/Industries";
-import Testimonials from "./components/Testimonials";
+import About from "./components/About";
 import CTA from "./components/CTA";
 import Footer from "./components/Footer";
 
@@ -22,7 +22,7 @@ export default function Home() {
         <Platform />
         <Approach />
         <Industries />
-        <Testimonials />
+        <About />
         <CTA />
       </main>
       <Footer />
