@@ -39,7 +39,6 @@ export default function Footer() {
               width={196}
               height={95}
               loading="eager"
-              className="rounded-md"
             />
             <p className="mt-5 max-w-xs text-sm text-muted">
               AI-native security for teams too small for a full-time SOC.

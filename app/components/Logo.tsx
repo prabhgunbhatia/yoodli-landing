@@ -8,7 +8,6 @@ export default function Logo({ className = "" }: { className?: string }) {
         alt="IG Technologies"
         width={30}
         height={30}
-        className="rounded-md"
       />
       <span className="text-base font-semibold tracking-tight text-white">
         IG Technologies
