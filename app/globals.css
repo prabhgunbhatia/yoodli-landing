@@ -16,6 +16,8 @@
 }
 
 html {
+  /* ~110% zoom: scales every rem-based size (text, spacing, layout) */
+  font-size: 110%;
   scroll-behavior: smooth;
 }
 
