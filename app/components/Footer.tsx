@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { LogoIcon } from "./Logo";
 import { MailIcon, PinIcon, PhoneIcon } from "./icons";
 
 const columns = [
@@ -33,13 +33,17 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:grid-cols-5">
           <div className="col-span-2">
-            <Image
-              src="/logo-full.png"
-              alt="IG Technologies Consulting Inc."
-              width={196}
-              height={95}
-              loading="eager"
-            />
+            <div className="flex items-center gap-4">
+              <LogoIcon size={52} />
+              <div>
+                <p className="text-lg font-bold tracking-wide text-white">
+                  IG TECHNOLOGIES
+                </p>
+                <p className="mono-label mt-0.5 text-[11px] uppercase tracking-[0.28em] text-accent">
+                  Consulting Inc.
+                </p>
+              </div>
+            </div>
             <p className="mt-5 max-w-xs text-sm text-muted">
               AI-native security for teams too small for a full-time SOC.
               Founded by Prabhgun Bhatia.

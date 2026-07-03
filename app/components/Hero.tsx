@@ -4,17 +4,17 @@ export default function Hero() {
       <div className="glow pointer-events-none absolute -top-40 left-1/2 h-[480px] w-[800px] -translate-x-1/2 blur-3xl" />
 
       <div className="relative mx-auto max-w-6xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 px-3 py-1 text-xs text-muted">
+        <div className="mx-auto max-w-3xl text-center">
+          <div className="mb-7 inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.03] px-4 py-1.5 text-[13px] text-muted">
             <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-accent)]" />
             Private beta · built in Hamilton, ON
           </div>
 
-          <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+          <h1 className="text-balance text-4xl font-semibold leading-[1.08] tracking-[-0.02em] text-white sm:text-5xl lg:text-6xl">
             AI-native security for teams too small for a 24/7 SOC
           </h1>
 
-          <p className="mx-auto mt-6 max-w-xl text-lg text-muted">
+          <p className="mx-auto mt-6 max-w-xl text-balance text-lg leading-relaxed text-muted">
             IG Technologies watches your cloud, endpoints, and identity stack
             around the clock, uses AI to tell real threats from noise, and
             tells you exactly what happened and what to do next.
@@ -23,22 +23,22 @@ export default function Hero() {
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a
               href="#contact"
-              className="w-full rounded-md bg-white px-6 py-3 text-sm font-semibold text-black transition-opacity hover:opacity-85 sm:w-auto"
+              className="w-full rounded-lg bg-white px-6 py-3 text-sm font-semibold text-black transition-opacity hover:opacity-85 sm:w-auto"
             >
               Get early access
             </a>
             <a
               href="#approach"
-              className="w-full rounded-md border border-white/15 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/5 sm:w-auto"
+              className="w-full rounded-lg border border-white/15 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/5 sm:w-auto"
             >
               See how it works
             </a>
           </div>
         </div>
 
-        <div className="relative mx-auto mt-16 max-w-3xl">
-          <div className="card overflow-hidden rounded-xl">
-            <div className="flex items-center gap-2 border-b border-white/10 px-4 py-3">
+        <div className="relative mx-auto mt-20 max-w-3xl">
+          <div className="card overflow-hidden rounded-xl shadow-2xl shadow-black/50">
+            <div className="flex items-center gap-2 border-b border-white/10 bg-white/[0.02] px-4 py-3">
               <span className="h-2.5 w-2.5 rounded-full bg-white/10" />
               <span className="h-2.5 w-2.5 rounded-full bg-white/10" />
               <span className="h-2.5 w-2.5 rounded-full bg-white/10" />

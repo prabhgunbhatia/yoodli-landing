@@ -23,11 +23,11 @@ export default function CTA() {
                 type="email"
                 required
                 placeholder="you@company.com"
-                className="w-full rounded-md border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-muted focus:border-white/30 focus:outline-none"
+                className="w-full rounded-lg border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-muted focus:border-[var(--color-accent)]/60 focus:outline-none"
               />
               <button
                 type="submit"
-                className="shrink-0 rounded-md bg-white px-6 py-3 text-sm font-semibold text-black transition-opacity hover:opacity-85"
+                className="shrink-0 rounded-lg bg-white px-6 py-3 text-sm font-semibold text-black transition-opacity hover:opacity-85"
               >
                 Request access
               </button>

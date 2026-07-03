@@ -15,10 +15,18 @@
   --muted: #8b8b93;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--foreground);
   background: var(--color-ink);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: rgba(41, 193, 221, 0.3);
 }
 
 .text-muted {
@@ -36,6 +44,11 @@ body {
 .card {
   background: rgba(255, 255, 255, 0.015);
   border: 1px solid var(--color-border);
+  transition: border-color 0.2s ease;
+}
+
+.card:hover {
+  border-color: rgba(255, 255, 255, 0.16);
 }
 
 .mono-label {

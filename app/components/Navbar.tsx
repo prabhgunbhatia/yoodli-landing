@@ -15,17 +15,17 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-[#09090b]/85 backdrop-blur-md">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6 lg:px-8">
+      <nav className="mx-auto flex h-[76px] max-w-6xl items-center justify-between px-6 lg:px-8">
         <a href="#top" className="shrink-0">
           <Logo />
         </a>
 
-        <div className="hidden items-center gap-10 lg:flex">
+        <div className="hidden items-center gap-9 lg:flex">
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-base text-muted transition-colors hover:text-white"
+              className="text-[15px] font-medium text-muted transition-colors hover:text-white"
             >
               {link.label}
             </a>
@@ -35,7 +35,7 @@ export default function Navbar() {
         <div className="hidden items-center lg:flex">
           <a
             href="#contact"
-            className="rounded-md bg-white px-5 py-2.5 text-base font-medium text-black transition-opacity hover:opacity-85"
+            className="rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-black transition-opacity hover:opacity-85"
           >
             Get early access
           </a>
@@ -44,7 +44,7 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="flex items-center justify-center rounded-md border border-white/10 p-2.5 text-white lg:hidden"
+          className="flex items-center justify-center rounded-lg border border-white/10 p-2.5 text-white lg:hidden"
           aria-label="Toggle menu"
           aria-expanded={open}
         >
@@ -68,7 +68,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="text-base text-muted transition-colors hover:text-white"
+                className="text-[15px] font-medium text-muted transition-colors hover:text-white"
               >
                 {link.label}
               </a>
@@ -76,7 +76,7 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className="mt-2 rounded-md bg-white px-5 py-2.5 text-center text-base font-medium text-black"
+              className="mt-1 rounded-lg bg-white px-5 py-2.5 text-center text-sm font-semibold text-black"
             >
               Get early access
             </a>
