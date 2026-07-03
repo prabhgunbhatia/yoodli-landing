@@ -5,12 +5,12 @@ export default function Hero() {
 
       <div className="relative mx-auto max-w-6xl px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <div className="mb-7 inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.03] px-4 py-1.5 text-[13px] text-muted">
+          <div className="mb-7 inline-flex items-center gap-2.5 rounded-full border border-[var(--color-border)] bg-[var(--surface-2)] px-4 py-1.5 text-[13px] text-muted">
             <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-accent)]" />
             Private beta · built in Hamilton, ON
           </div>
 
-          <h1 className="text-balance text-4xl font-semibold leading-[1.08] tracking-[-0.02em] text-white sm:text-5xl lg:text-6xl">
+          <h1 className="text-balance text-4xl font-semibold leading-[1.08] tracking-[-0.02em] text-[var(--foreground)] sm:text-5xl lg:text-6xl">
             AI-native security for teams too small for a 24/7 SOC
           </h1>
 
@@ -23,13 +23,13 @@ export default function Hero() {
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a
               href="#contact"
-              className="w-full rounded-lg bg-white px-6 py-3 text-sm font-semibold text-black transition-opacity hover:opacity-85 sm:w-auto"
+              className="w-full rounded-lg bg-[var(--btn-bg)] px-6 py-3 text-sm font-semibold text-[var(--btn-fg)] transition-opacity hover:opacity-85 sm:w-auto"
             >
               Get early access
             </a>
             <a
               href="#approach"
-              className="w-full rounded-lg border border-white/15 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/5 sm:w-auto"
+              className="w-full rounded-lg border border-[var(--color-border-strong)] px-6 py-3 text-sm font-semibold text-[var(--foreground)] transition-colors hover:bg-[var(--surface-3)] sm:w-auto"
             >
               See how it works
             </a>
@@ -37,40 +37,41 @@ export default function Hero() {
         </div>
 
         <div className="relative mx-auto mt-20 max-w-3xl">
-          <div className="card overflow-hidden rounded-xl shadow-2xl shadow-black/50">
+          {/* Terminal card keeps a fixed dark "code editor" look in both themes */}
+          <div className="overflow-hidden rounded-xl border border-white/10 bg-[#0c0e14] shadow-2xl shadow-black/40">
             <div className="flex items-center gap-2 border-b border-white/10 bg-white/[0.02] px-4 py-3">
               <span className="h-2.5 w-2.5 rounded-full bg-white/10" />
               <span className="h-2.5 w-2.5 rounded-full bg-white/10" />
               <span className="h-2.5 w-2.5 rounded-full bg-white/10" />
-              <span className="ml-2 font-[family-name:var(--font-geist-mono)] text-xs text-muted">
+              <span className="ml-2 font-[family-name:var(--font-geist-mono)] text-xs text-[#8b8b93]">
                 sentinel-agent — live
               </span>
             </div>
 
             <pre className="overflow-x-auto px-4 py-5 font-[family-name:var(--font-geist-mono)] text-[11px] leading-relaxed sm:px-5 sm:text-[13px]">
               <code>
-                <span className="text-muted">$ </span>
+                <span className="text-[#8b8b93]">$ </span>
                 <span className="text-white">ig status --env production</span>
                 {"\n"}
-                <span className="text-muted">  monitoring 3 environments · last scan 8s ago</span>
+                <span className="text-[#8b8b93]">  monitoring 3 environments · last scan 8s ago</span>
                 {"\n\n"}
                 <span className="text-amber-300">[ALERT]</span>
-                <span className="text-muted"> 2026-07-02 03:14:02 UTC</span>
+                <span className="text-[#8b8b93]"> 2026-07-02 03:14:02 UTC</span>
                 {"\n"}
-                <span className="text-muted">  type    </span>
+                <span className="text-[#8b8b93]">  type    </span>
                 <span className="text-white">anomalous_login</span>
                 {"\n"}
-                <span className="text-muted">  user    </span>
+                <span className="text-[#8b8b93]">  user    </span>
                 <span className="text-white">r.tanaka@company.io</span>
                 {"\n"}
-                <span className="text-muted">  signal  </span>
+                <span className="text-[#8b8b93]">  signal  </span>
                 <span className="text-white">impossible travel — Toronto to Lagos in 6 min</span>
                 {"\n"}
-                <span className="text-muted">  risk    </span>
+                <span className="text-[#8b8b93]">  risk    </span>
                 <span className="text-red-300">high</span>
                 {"\n"}
-                <span className="text-muted">  action  </span>
-                <span className="text-[var(--color-accent)]">session revoked, MFA re-challenge sent</span>
+                <span className="text-[#8b8b93]">  action  </span>
+                <span className="text-[#29c1dd]">session revoked, MFA re-challenge sent</span>
               </code>
             </pre>
           </div>

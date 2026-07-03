@@ -33,13 +33,13 @@ const steps = [
 
 export default function Approach() {
   return (
-    <section id="approach" className="border-y border-white/10 bg-white/[0.02] py-24 lg:py-28">
+    <section id="approach" className="border-y border-[var(--color-border)] bg-[var(--surface-1)] py-24 lg:py-28">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <div className="max-w-xl">
           <p className="mono-label text-xs uppercase text-accent">
             How it works
           </p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[var(--foreground)] sm:text-4xl">
             From raw signal to a decision you can trust
           </h2>
         </div>
@@ -47,10 +47,10 @@ export default function Approach() {
         <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
           {steps.map((item) => (
             <div key={item.step} className="card rounded-xl p-6">
-              <span className="text-2xl font-semibold text-white/25">
+              <span className="text-2xl font-semibold text-[var(--foreground)]/25">
                 {item.step}
               </span>
-              <h3 className="mt-4 text-base font-medium text-white">
+              <h3 className="mt-4 text-base font-medium text-[var(--foreground)]">
                 {item.title}
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-muted">

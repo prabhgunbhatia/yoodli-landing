@@ -28,7 +28,7 @@ export default function Platform() {
             <p className="mono-label text-xs uppercase text-accent">
               The platform
             </p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[var(--foreground)] sm:text-4xl">
               One system, three parts
             </h2>
             <p className="mt-4 text-muted">
@@ -43,10 +43,10 @@ export default function Platform() {
             {products.map((product) => (
               <div key={product.name} className="card rounded-xl p-6">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-base font-semibold text-white">
+                  <h3 className="text-base font-semibold text-[var(--foreground)]">
                     {product.name}
                   </h3>
-                  <span className="mono-label rounded border border-white/10 px-2 py-1 text-[11px] text-muted">
+                  <span className="mono-label rounded border border-[var(--color-border)] px-2 py-1 text-[11px] text-muted">
                     {product.tag}
                   </span>
                 </div>

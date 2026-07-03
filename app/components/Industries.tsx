@@ -25,7 +25,7 @@ export default function Industries() {
           <p className="mono-label text-xs uppercase text-accent">
             Industries
           </p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[var(--foreground)] sm:text-4xl">
             Early customers, real constraints
           </h2>
           <p className="mt-4 text-muted">
@@ -35,10 +35,10 @@ export default function Industries() {
           </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-white/10 bg-white/10 sm:grid-cols-2">
+        <div className="mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-[var(--color-border)] bg-[var(--color-border)] sm:grid-cols-2">
           {industries.map((industry) => (
-            <div key={industry.name} className="bg-[#09090b] p-8">
-              <h3 className="text-base font-medium text-white">
+            <div key={industry.name} className="bg-[var(--background)] p-8">
+              <h3 className="text-base font-medium text-[var(--foreground)]">
                 {industry.name}
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-muted">

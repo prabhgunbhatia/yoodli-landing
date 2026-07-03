@@ -1,18 +1,46 @@
 @import "tailwindcss";
 
+@custom-variant light (&:where([data-theme="light"], [data-theme="light"] *));
+
 @theme {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-
-  --color-ink: #09090b;
-  --color-border: #1f1f23;
-  --color-accent: #29c1dd;
 }
 
 :root {
-  --background: var(--color-ink);
+  --background: #09090b;
   --foreground: #f4f4f5;
   --muted: #8b8b93;
+  --color-border: #1f1f23;
+  --color-border-strong: #2c2c33;
+  --color-accent: #29c1dd;
+  --surface-1: rgba(255, 255, 255, 0.02);
+  --surface-2: rgba(255, 255, 255, 0.03);
+  --surface-3: rgba(255, 255, 255, 0.05);
+  --surface-4: rgba(255, 255, 255, 0.1);
+  --card-bg: rgba(255, 255, 255, 0.015);
+  --card-border-hover: rgba(255, 255, 255, 0.16);
+  --btn-bg: #ffffff;
+  --btn-fg: #0a0a0a;
+  --glow-alpha: 0.14;
+}
+
+:root[data-theme="light"] {
+  --background: #fafafa;
+  --foreground: #131316;
+  --muted: #6b6b74;
+  --color-border: #e4e4e8;
+  --color-border-strong: #d4d4da;
+  --color-accent: #0f8fa8;
+  --surface-1: rgba(0, 0, 0, 0.02);
+  --surface-2: rgba(0, 0, 0, 0.03);
+  --surface-3: rgba(0, 0, 0, 0.04);
+  --surface-4: rgba(0, 0, 0, 0.08);
+  --card-bg: rgba(0, 0, 0, 0.012);
+  --card-border-hover: rgba(0, 0, 0, 0.18);
+  --btn-bg: #131316;
+  --btn-fg: #ffffff;
+  --glow-alpha: 0.1;
 }
 
 html {
@@ -23,8 +51,9 @@ html {
 
 body {
   color: var(--foreground);
-  background: var(--color-ink);
+  background: var(--background);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 ::selection {
@@ -40,17 +69,17 @@ body {
 }
 
 .glow {
-  background: radial-gradient(closest-side, rgba(41, 193, 221, 0.14), transparent);
+  background: radial-gradient(closest-side, rgba(41, 193, 221, var(--glow-alpha)), transparent);
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.015);
+  background: var(--card-bg);
   border: 1px solid var(--color-border);
-  transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease, background-color 0.25s ease;
 }
 
 .card:hover {
-  border-color: rgba(255, 255, 255, 0.16);
+  border-color: var(--card-border-hover);
 }
 
 .mono-label {

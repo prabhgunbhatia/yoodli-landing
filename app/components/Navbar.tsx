@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Logo from "./Logo";
+import ThemeToggle from "./ThemeToggle";
 
 const links = [
   { href: "#product", label: "Product" },
@@ -27,7 +28,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 z-50 w-full border-b transition-all duration-300 ${
         solid
-          ? "border-white/10 bg-[#09090b]/70 shadow-lg shadow-black/20 backdrop-blur-xl"
+          ? "border-[var(--color-border)] bg-[var(--background)]/70 shadow-lg shadow-black/10 backdrop-blur-xl"
           : "border-transparent bg-transparent"
       }`}
     >
@@ -45,50 +46,54 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-[15px] font-medium text-muted transition-colors hover:text-white"
+              className="text-[15px] font-medium text-muted transition-colors hover:text-[var(--foreground)]"
             >
               {link.label}
             </a>
           ))}
         </div>
 
-        <div className="hidden items-center lg:flex">
+        <div className="hidden items-center gap-4 lg:flex">
+          <ThemeToggle />
           <a
             href="#contact"
-            className="rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-black transition-opacity hover:opacity-85"
+            className="rounded-lg bg-[var(--btn-bg)] px-5 py-2.5 text-sm font-semibold text-[var(--btn-fg)] transition-opacity hover:opacity-85"
           >
             Get early access
           </a>
         </div>
 
-        <button
-          type="button"
-          onClick={() => setOpen((v) => !v)}
-          className="flex items-center justify-center rounded-lg border border-white/10 p-2.5 text-white lg:hidden"
-          aria-label="Toggle menu"
-          aria-expanded={open}
-        >
-          {open ? (
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M18 6L6 18M6 6l12 12" strokeLinecap="round" />
-            </svg>
-          ) : (
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M3 6h18M3 12h18M3 18h18" strokeLinecap="round" />
-            </svg>
-          )}
-        </button>
+        <div className="flex items-center gap-3 lg:hidden">
+          <ThemeToggle />
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            className="flex items-center justify-center rounded-lg border border-[var(--color-border)] p-2.5 text-[var(--foreground)]"
+            aria-label="Toggle menu"
+            aria-expanded={open}
+          >
+            {open ? (
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M18 6L6 18M6 6l12 12" strokeLinecap="round" />
+              </svg>
+            ) : (
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M3 6h18M3 12h18M3 18h18" strokeLinecap="round" />
+              </svg>
+            )}
+          </button>
+        </div>
       </nav>
 
       {open && (
-        <div className="border-t border-white/10 bg-[#09090b] px-6 py-5 lg:hidden">
+        <div className="border-t border-[var(--color-border)] bg-[var(--background)] px-6 py-5 lg:hidden">
           <div className="flex flex-col gap-5">
             {links.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="text-[15px] font-medium text-muted transition-colors hover:text-white"
+                className="text-[15px] font-medium text-muted transition-colors hover:text-[var(--foreground)]"
               >
                 {link.label}
               </a>
@@ -96,7 +101,7 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className="mt-1 rounded-lg bg-white px-5 py-2.5 text-center text-sm font-semibold text-black"
+              className="mt-1 rounded-lg bg-[var(--btn-bg)] px-5 py-2.5 text-center text-sm font-semibold text-[var(--btn-fg)]"
             >
               Get early access
             </a>

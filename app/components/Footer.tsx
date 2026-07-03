@@ -29,14 +29,14 @@ const contact = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 py-16">
+    <footer className="border-t border-[var(--color-border)] py-16">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:grid-cols-5">
           <div className="col-span-2">
             <div className="flex items-center gap-4">
               <LogoIcon size={52} />
               <div>
-                <p className="text-lg font-bold tracking-wide text-white">
+                <p className="text-lg font-bold tracking-wide text-[var(--foreground)]">
                   IG TECHNOLOGIES
                 </p>
                 <p className="mono-label mt-0.5 text-[11px] uppercase tracking-[0.28em] text-accent">
@@ -52,13 +52,13 @@ export default function Footer() {
 
           {columns.map((col) => (
             <div key={col.title}>
-              <h4 className="text-sm font-medium text-white">{col.title}</h4>
+              <h4 className="text-sm font-medium text-[var(--foreground)]">{col.title}</h4>
               <ul className="mt-4 space-y-3">
                 {col.links.map((link) => (
                   <li key={link}>
                     <a
                       href="#"
-                      className="text-sm text-muted transition-colors hover:text-white"
+                      className="text-sm text-muted transition-colors hover:text-[var(--foreground)]"
                     >
                       {link}
                     </a>
@@ -69,13 +69,13 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-8 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-8">
+        <div className="mt-12 flex flex-col gap-4 border-t border-[var(--color-border)] pt-8 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-8">
           {contact.map((item) =>
             item.href ? (
               <a
                 key={item.text}
                 href={item.href}
-                className="flex items-center gap-2 text-sm text-muted transition-colors hover:text-white"
+                className="flex items-center gap-2 text-sm text-muted transition-colors hover:text-[var(--foreground)]"
               >
                 <item.icon className="h-4 w-4 shrink-0 text-accent" />
                 {item.text}
@@ -89,13 +89,13 @@ export default function Footer() {
           )}
         </div>
 
-        <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
+        <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-[var(--color-border)] pt-8 sm:flex-row">
           <p className="text-xs text-muted">
             © {new Date().getFullYear()} IG Technologies Consulting Inc. All rights reserved.
           </p>
           <div className="flex gap-6 text-xs text-muted">
-            <a href="#" className="hover:text-white">Privacy Policy</a>
-            <a href="#" className="hover:text-white">Terms of Service</a>
+            <a href="#" className="hover:text-[var(--foreground)]">Privacy Policy</a>
+            <a href="#" className="hover:text-[var(--foreground)]">Terms of Service</a>
           </div>
         </div>
       </div>

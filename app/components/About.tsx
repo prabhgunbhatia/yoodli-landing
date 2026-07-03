@@ -7,14 +7,14 @@ const facts = [
 
 export default function About() {
   return (
-    <section id="about" className="border-y border-white/10 bg-white/[0.02] py-24 lg:py-28">
+    <section id="about" className="border-y border-[var(--color-border)] bg-[var(--surface-1)] py-24 lg:py-28">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
           <div>
             <p className="mono-label text-xs uppercase text-accent">
               About
             </p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[var(--foreground)] sm:text-4xl">
               Why we&apos;re building IG Technologies
             </h2>
             <p className="mt-5 text-muted">
@@ -29,16 +29,16 @@ export default function About() {
               security or IT team can focus on the handful of decisions that
               actually need a human.
             </p>
-            <p className="mt-6 text-sm text-white">
+            <p className="mt-6 text-sm text-[var(--foreground)]">
               — Prabhgun Bhatia, Founder
             </p>
           </div>
 
-          <dl className="grid grid-cols-2 gap-6 self-start rounded-xl border border-white/10 p-6 sm:p-8">
+          <dl className="grid grid-cols-2 gap-6 self-start rounded-xl border border-[var(--color-border)] p-6 sm:p-8">
             {facts.map((fact) => (
               <div key={fact.label}>
                 <dt className="text-xs text-muted">{fact.label}</dt>
-                <dd className="mt-1 text-sm font-medium text-white">
+                <dd className="mt-1 text-sm font-medium text-[var(--foreground)]">
                   {fact.value}
                 </dd>
               </div>

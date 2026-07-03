@@ -5,7 +5,7 @@ export default function CTA() {
         <div className="card relative overflow-hidden rounded-2xl px-8 py-16 text-center sm:px-16">
           <div className="glow pointer-events-none absolute -top-32 left-1/2 h-[320px] w-[600px] -translate-x-1/2 blur-3xl" />
           <div className="relative">
-            <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+            <h2 className="text-3xl font-semibold tracking-tight text-[var(--foreground)] sm:text-4xl">
               Get early access
             </h2>
             <p className="mx-auto mt-4 max-w-lg text-muted">
@@ -23,11 +23,11 @@ export default function CTA() {
                 type="email"
                 required
                 placeholder="you@company.com"
-                className="w-full rounded-lg border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-muted focus:border-[var(--color-accent)]/60 focus:outline-none"
+                className="w-full rounded-lg border border-[var(--color-border-strong)] bg-[var(--surface-3)] px-4 py-3 text-sm text-[var(--foreground)] placeholder:text-muted focus:border-[var(--color-accent)]/60 focus:outline-none"
               />
               <button
                 type="submit"
-                className="shrink-0 rounded-lg bg-white px-6 py-3 text-sm font-semibold text-black transition-opacity hover:opacity-85"
+                className="shrink-0 rounded-lg bg-[var(--btn-bg)] px-6 py-3 text-sm font-semibold text-[var(--btn-fg)] transition-opacity hover:opacity-85"
               >
                 Request access
               </button>

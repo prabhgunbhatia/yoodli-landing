@@ -7,12 +7,12 @@ const points = [
 
 export default function Stats() {
   return (
-    <section className="border-y border-white/10 py-14">
+    <section className="border-y border-[var(--color-border)] py-14">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
           {points.map((point) => (
             <div key={point.label} className="text-center">
-              <p className="text-2xl font-semibold text-white sm:text-3xl">
+              <p className="text-2xl font-semibold text-[var(--foreground)] sm:text-3xl">
                 {point.value}
               </p>
               <p className="mt-2 text-sm text-muted">{point.label}</p>

@@ -37,7 +37,7 @@ export default function Logo({ className = "" }: { className?: string }) {
   return (
     <div className={`flex items-center gap-3 ${className}`}>
       <LogoIcon size={42} />
-      <span className="text-[21px] font-semibold tracking-tight text-white">
+      <span className="text-[21px] font-semibold tracking-tight text-[var(--foreground)]">
         IG Technologies
       </span>
     </div>

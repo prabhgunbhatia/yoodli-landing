@@ -54,7 +54,7 @@ export default function Services() {
           <p className="mono-label text-xs uppercase text-accent">
             What we do
           </p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[var(--foreground)] sm:text-4xl">
             Everything a lean security team needs, none of the noise
           </h2>
           <p className="mt-4 text-muted">
@@ -64,11 +64,11 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-[var(--color-border)] bg-[var(--color-border)] sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
-            <div key={service.title} className="bg-[#09090b] p-7">
+            <div key={service.title} className="bg-[var(--background)] p-7">
               <service.icon className="h-5 w-5 text-accent" />
-              <h3 className="mt-5 text-base font-medium text-white">
+              <h3 className="mt-5 text-base font-medium text-[var(--foreground)]">
                 {service.title}
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-muted">
