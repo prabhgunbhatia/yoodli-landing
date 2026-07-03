@@ -6,7 +6,7 @@
 
   --color-ink: #09090b;
   --color-border: #1f1f23;
-  --color-accent: #3ecfb2;
+  --color-accent: #29c1dd;
 }
 
 :root {
@@ -30,7 +30,7 @@ body {
 }
 
 .glow {
-  background: radial-gradient(closest-side, rgba(62, 207, 178, 0.14), transparent);
+  background: radial-gradient(closest-side, rgba(41, 193, 221, 0.14), transparent);
 }
 
 .card {
