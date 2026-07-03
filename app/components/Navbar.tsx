@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Logo from "./Logo";
 
 const links = [
@@ -12,10 +12,30 @@ const links = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 12);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const solid = scrolled || open;
 
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-[#09090b]/85 backdrop-blur-md">
-      <nav className="mx-auto flex h-[76px] max-w-6xl items-center justify-between px-6 lg:px-8">
+    <header
+      className={`fixed top-0 z-50 w-full border-b transition-all duration-300 ${
+        solid
+          ? "border-white/10 bg-[#09090b]/70 shadow-lg shadow-black/20 backdrop-blur-xl"
+          : "border-transparent bg-transparent"
+      }`}
+    >
+      <nav
+        className={`mx-auto flex max-w-6xl items-center justify-between px-6 transition-all duration-300 lg:px-8 ${
+          scrolled ? "h-[72px]" : "h-[92px]"
+        }`}
+      >
         <a href="#top" className="shrink-0">
           <Logo />
         </a>
